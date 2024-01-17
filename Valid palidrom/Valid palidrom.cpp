@@ -3,7 +3,7 @@
 using namespace std;
 bool isPalindrome(string s)
 {
-    int l,m;
+    int l;
     string a;
     for (auto i : s)
     { if (isalnum(i))
