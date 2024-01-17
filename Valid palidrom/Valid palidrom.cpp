@@ -6,21 +6,12 @@ bool isPalindrome(string s)
     int l,m;
     string a;
     for (auto i : s)
-    {
-        if ((i > 64 && i < 91) || (i > 96 && i < 123)||(i>47&&i<58))
-        {
-            a.push_back(tolower(i));
-        }
-    }
+    { if (isalnum(i))
+            a.push_back(tolower(i)); }
     l = a.size();
-    m = l / 2;
-    if (m % 2 != 0)
-        m + 1;
-    for (int i(0), j(l - 1); i < m; ++i, --j)
-    {
-        if (a[i] != a[j])
-            return false;
-    }
+    
+    for (int i(0); i < l/2; ++i)
+    {if (a[i] != a[l-i-1]) return false; }
     return true;
 }
 
