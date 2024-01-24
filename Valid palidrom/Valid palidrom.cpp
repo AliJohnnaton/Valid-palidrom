@@ -3,15 +3,15 @@
 using namespace std;
 bool isPalindrome(string s)
 {
-    int l;
-    string a1;
+    int l2;
+    string a;
     for (auto i : s)
     { if (isalnum(i))
-            a1.push_back(tolower(i)); }
-    l = a1.size();
+            a.push_back(tolower(i)); }
+    l2 = a.size();
     
-    for (int i(0); i < l/2; ++i)
-    {if (a1[i] != a1[l-i-1]) return false; }
+    for (int i(0); i < l2/2; ++i)
+    {if (a[i] != a[l2-i-1]) return false; }
     return true;
 }
 
